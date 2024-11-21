@@ -59,23 +59,9 @@
     packages = with pkgs; [
       tree
     ];
+    
   };
-
-  # Link directory
-  systemd.user.services.linkDocuments = {
-    description = "Create symlinks for various directories";
-    serviceConfig.ExecStart = ''
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Document /home/tabun/Document
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Desktop /home/tabun/Desktop
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Downloads /home/tabun/Downloads
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Music /home/tabun/Music
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Pictures /home/tabun/Pictures
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Public /home/tabun/Public
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Templates /home/tabun/Templates
-      ${pkgs.coreutils}/bin/ln -s /mnt/data/Videos /home/tabun/Videos
-    '';
-    wantedBy = [ "default.target" ];
-  };
+  
   
   # Allow untrue
   nixpkgs.config.allowUnfree = true;
