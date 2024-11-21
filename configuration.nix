@@ -48,6 +48,13 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Eanble scrub mweekly
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+    fileSystems = [ "/" ];
+  };
+
   # Enable sound.
   hardware.pulseaudio.enable = false;
   services.pipewire = {
@@ -67,7 +74,6 @@
     ];
   };
   
-  
   # Allow untrue
   nixpkgs.config.allowUnfree = true;
 
@@ -85,6 +91,7 @@
     hunspell
     hunspellDicts.en_US
     heroic
+    kdePackages.sddm
   ];
 
   # Virtualisation
