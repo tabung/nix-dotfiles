@@ -90,8 +90,6 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
-    heroic
-    kdePackages.sddm
   ];
 
   # Virtualisation
