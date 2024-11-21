@@ -5,6 +5,7 @@
     ./apps/terminal/kitty.nix
     ./apps/terminal/tmux.nix
     ./apps/terminal/sh.nix
+    ./apps/terminal/nvim.nix
   ];
   
   # Home Manager needs a bit of information about you and the paths it should

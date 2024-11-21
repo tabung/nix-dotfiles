@@ -18,6 +18,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # Networking
   networking.hostName = "devzc0de"; # Define your hostname.
@@ -90,6 +91,7 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
+    openjdk
   ];
 
   # Virtualisation
