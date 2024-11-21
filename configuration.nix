@@ -12,6 +12,9 @@
       ./modules/sessions/battray.nix
     ];
 
+  # Latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -81,6 +84,7 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
+    heroic
   ];
 
   # Virtualisation
