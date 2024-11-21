@@ -55,6 +55,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.r3z = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     description = "Rezky Yuranda";
     extraGroups = [ "wheel" "audio" "video" "disk" "docker"]; # Enable ‘sudo’ for the user.
     uid = 1000; # Make it default, so I can swap user
@@ -82,8 +83,18 @@
     hunspellDicts.en_US
   ];
 
+  # Virtualisation
+  # Virtualization
+  virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.libvirtd.enable = true;
+
+  # Program
   programs.firefox.enable = true;
   programs.dconf.enable = true;
+  programs.zsh.enable = true;
+  programs.virt-manager.enable = true;
+  programs.steam.enable = true;
   
   system.stateVersion = "24.05"; # Did you read the comment?
   nix.settings.experimental-features = ["nix-command" "flakes"];
