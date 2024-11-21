@@ -10,12 +10,11 @@ in
     description = "Set the battery charge threshold";
     after = [ "multi-user.target" ];
     startLimitBurst = 0;
-    timeoutStartSec = "10s";  # timeout in case something goes wrong
     serviceConfig = {
       Type = "oneshot";
       Restart = "on-failure";
-      ExecStart = "${pkgs.bash}/bin/bash -c 'echo ${chargeThreshold} > ${batteryPath}'";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'echo ${toString chargeThreshold} > ${batteryPath}'";
     };
     wantedBy = [ "multi-user.target" ];
   };
-};
+}
