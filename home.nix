@@ -42,8 +42,9 @@
     
   };
 
-  home.file."Documents" = {
-    source = "/mnt/data/Documents";  # Direktori sumber
+  home.file.".Documents" = {
+    source = "/mnt/Documents";
+    target = "/home/user/Documents";
   };
 
   # Home Manager can also manage your environment variables through
@@ -65,6 +66,10 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+  
+  home.sessionCommands = ''
+    bash ./link.sh
+  '';
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

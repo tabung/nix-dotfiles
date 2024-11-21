@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/font.nix
+      ./modules/sessions/battray.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -59,7 +61,6 @@
     packages = with pkgs; [
       tree
     ];
-    
   };
   
   
