@@ -92,6 +92,9 @@
     hunspell
     hunspellDicts.en_US
     openjdk
+    lutris
+    telegram-desktop
+    kget
   ];
 
   # Virtualisation
