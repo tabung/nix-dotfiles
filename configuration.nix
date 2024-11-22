@@ -68,10 +68,11 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Rezky Yuranda";
-    extraGroups = [ "wheel" "audio" "video" "disk" "docker"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "audio" "video" "disk" "docker" "libvirt"]; # Enable ‘sudo’ for the user.
     uid = 1000; # Make it default, so I can swap user
     packages = with pkgs; [
       tree
+      kget
     ];
   };
   
@@ -94,7 +95,10 @@
     openjdk
     lutris
     telegram-desktop
-    kget
+    jetbrains.phpstorm
+    jetbrains.pycharm-professional
+    jetbrains.jdk
+    jetbrains.datagrip
   ];
 
   # Virtualisation
