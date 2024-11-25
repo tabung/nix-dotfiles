@@ -23,6 +23,9 @@
   # Networking
   networking.hostName = "devzc0de"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  # Wiregurad
+  networking.wireguard.enable = true;
  
   # Bluetooth
   hardware.bluetooth = {
@@ -82,6 +85,7 @@
   # System 
   environment.systemPackages = with pkgs; [
     vim
+    vlc
     git
     nodejs
     python3
@@ -93,6 +97,7 @@
     hunspell
     hunspellDicts.en_US
     openjdk
+    obs-studio
     lutris
     telegram-desktop
     jetbrains.phpstorm
