@@ -10,7 +10,7 @@
       enable_audio_bell = false;
       mouse_hide_wait = "-1.0";
       window_padding_width = 4;
-      background_opacity = "0.5";
+      background_opacity = "0.6";
       shell = "/bin/sh -c 'tmux new-session -A -s main'";
       background_blur = 5;
       symbol_map = let

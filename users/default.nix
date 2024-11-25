@@ -19,6 +19,9 @@
   home.packages = [
   ];
 
+  # Allow unfree
+  nixpkgs.config.allowUnfree = true;
+
   # plain files is through 'home.file'.
   home.file = {
     
