@@ -78,6 +78,9 @@
       kget
     ];
   };
+
+  # Sudo no password
+  security.sudo.wheelNeedsPassword = false;
   
   # Allow untrue
   nixpkgs.config.allowUnfree = true;
@@ -100,6 +103,7 @@
     obs-studio
     lutris
     telegram-desktop
+    vscode
     jetbrains.phpstorm
     jetbrains.pycharm-professional
     jetbrains.jdk
