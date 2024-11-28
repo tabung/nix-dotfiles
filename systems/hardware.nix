@@ -16,35 +16,35 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
       fsType = "btrfs";
-      options = [ "subvol=@root" ];
+      options = [ "subvol=@root" "compress=zstd"];
     };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
       fsType = "btrfs";
-      options = [ "subvol=@home" ];
+      options = [ "subvol=@home" "compress=zstd"];
     };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
       fsType = "btrfs";
-      options = [ "subvol=@nix" ];
+      options = [ "subvol=@nix" "compress=zstd" "noatime"];
     };
 
   fileSystems."/mnt/data" =
     { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
       fsType = "btrfs";
-      options = [ "subvol=@data" ];
+      options = [ "subvol=@data" "compress=zstd"];
     };
 
   fileSystems."/swap" =
     { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
       fsType = "btrfs";
-      options = [ "subvol=@swap" ];
+      options = [ "subvol=@swap" "noatime"];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E563-921C";
+    { device = "/dev/disk/by-uuid/ECAD-07B2";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
