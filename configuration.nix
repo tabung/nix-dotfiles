@@ -37,6 +37,8 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [ amdvlk ];
+    extraPackages32 = with pkgs; [ driversi686Linux.amdvlk];
   };
 
   # Set your time zone.
@@ -111,6 +113,8 @@
     jetbrains.pycharm-professional
     jetbrains.jdk
     jetbrains.datagrip
+    wine
+    vulkan-tools
   ];
 
   # Virtualization
