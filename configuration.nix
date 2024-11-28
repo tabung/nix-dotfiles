@@ -90,10 +90,13 @@
     vim
     vlc
     git
+    zip
+    unzip
     nodejs
     python3
     wget
     remmina
+    android-studio
     alacritty
     obsidian
     libreoffice-qt
@@ -110,11 +113,14 @@
     jetbrains.datagrip
   ];
 
-  # Virtualisation
   # Virtualization
-  virtualisation.docker.enable = true;
-  virtualisation.docker.storageDriver = "btrfs";
+  #virtualisation.docker.enable = true;
+  #virtualisation.docker.storageDriver = "btrfs";
   virtualisation.libvirtd.enable = true;
+
+  ## Virtualbox
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "r3z" ];
 
   # Program
   programs.firefox.enable = true;
