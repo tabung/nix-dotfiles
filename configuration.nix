@@ -114,13 +114,13 @@
   ];
 
   # Virtualization
-  #virtualisation.docker.enable = true;
-  #virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "btrfs";
   virtualisation.libvirtd.enable = true;
 
   ## Virtualbox
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "r3z" ];
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "r3z" ];
 
   # Program
   programs.firefox.enable = true;
