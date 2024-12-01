@@ -8,48 +8,48 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
+    { device = "/dev/disk/by-uuid/94617bab-c1b1-4525-b241-fae80bb29339";
       fsType = "btrfs";
-      options = [ "subvol=@root" "compress=zstd"];
+      options = [ "subvol=@root" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
+    { device = "/dev/disk/by-uuid/94617bab-c1b1-4525-b241-fae80bb29339";
       fsType = "btrfs";
-      options = [ "subvol=@home" "compress=zstd"];
-    };
-
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
-      fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" "noatime"];
+      options = [ "subvol=@home" ];
     };
 
   fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
+    { device = "/dev/disk/by-uuid/94617bab-c1b1-4525-b241-fae80bb29339";
       fsType = "btrfs";
-      options = [ "subvol=@data" "compress=zstd"];
+      options = [ "subvol=@data" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/94617bab-c1b1-4525-b241-fae80bb29339";
+      fsType = "btrfs";
+      options = [ "subvol=@nix" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/042f9346-117e-491d-9016-cef58625042e";
+    { device = "/dev/disk/by-uuid/94617bab-c1b1-4525-b241-fae80bb29339";
       fsType = "btrfs";
-      options = [ "subvol=@swap" "noatime"];
+      options = [ "subvol=@swap" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/ECAD-07B2";
+    { device = "/dev/disk/by-uuid/F4ED-5AEB";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  swapDevices = [ { device = "/swap/swapfile"; } ];
+  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
