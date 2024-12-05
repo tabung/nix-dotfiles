@@ -13,7 +13,7 @@
     ];
 
   # Latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -69,7 +69,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.r3z = {
+  users.users.tabun = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Rezky Yuranda";
@@ -99,21 +99,19 @@
     wget
     remmina
     android-studio
-    alacritty
     obsidian
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
     openjdk
-    obs-studio
-    lutris
+    #obs-studio
+    #lutris
     telegram-desktop
     vscode
     jetbrains.phpstorm
     jetbrains.pycharm-professional
     jetbrains.jdk
     jetbrains.datagrip
-    wine
     vulkan-tools
   ];
 
@@ -131,9 +129,9 @@
   programs.dconf.enable = true;
   programs.zsh.enable = true;
   programs.virt-manager.enable = true;
-  programs.steam.enable = true;
+  #programs.steam.enable = true;
   
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
 }
