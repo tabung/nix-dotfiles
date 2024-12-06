@@ -21,7 +21,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Networking
-  networking.hostName = "devzc0de"; # Define your hostname.
+  networking.hostName = "dev0p"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Wiregurad
@@ -50,9 +50,9 @@
   # Plasma
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
-  services.displayManager.sddm.wayland.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -76,11 +76,13 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Rezky Yuranda";
-    extraGroups = [ "wheel" "audio" "video" "disk" "docker" "libvirt"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "gamemode" "audio" "video" "disk" "docker" "libvirt"]; # Enable ‘sudo’ for the user.
     uid = 1000; # Make it default, so I can swap user
     packages = with pkgs; [
       tree
       kget
+      kcalc
+      isoimagewriter
     ];
   };
 
@@ -108,8 +110,8 @@
     hunspellDicts.en_US
     openjdk
     #obs-studio
-    #lutris
-    heroic
+    lutris
+    #heroic
     telegram-desktop
     vscode
     jetbrains.phpstorm
@@ -117,6 +119,7 @@
     jetbrains.jdk
     jetbrains.datagrip
     vulkan-tools
+    wine
   ];
 
   # Virtualization
@@ -134,6 +137,7 @@
   programs.zsh.enable = true;
   programs.virt-manager.enable = true;
   programs.steam.enable = true;
+  programs.gamemode.enable = true;
   
   system.stateVersion = "24.11"; # Did you read the comment?
   nix.settings.experimental-features = ["nix-command" "flakes"];
