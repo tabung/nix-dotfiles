@@ -44,6 +44,10 @@
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
 
+  # Power Manjement
+  powerManagement.enable = true;
+  services.tlp.enable = true;
+
   # Plasma
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
