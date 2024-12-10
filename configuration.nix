@@ -12,10 +12,7 @@
       ./modules/sessions/battray.nix
     ];
 
-  # Latest kernel
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # Use the systemd-boot EFI boot loader.
+    # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
@@ -109,9 +106,7 @@
     hunspell
     hunspellDicts.en_US
     openjdk
-    #obs-studio
     lutris
-    #heroic
     telegram-desktop
     vscode
     jetbrains.phpstorm
@@ -120,6 +115,7 @@
     jetbrains.datagrip
     vulkan-tools
     wine
+    kdePackages.sddm-kcm
   ];
 
   # Virtualization
