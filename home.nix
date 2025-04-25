@@ -14,6 +14,12 @@
     remmina
     heroic
     vscode
+    libreoffice-fresh
+    zotero
+
+    # IDE
+    android-studio
+    jetbrains.datagrip
 
     # Theme app
     tela-icon-theme
@@ -57,6 +63,10 @@
           caffeine.extensionUuid
           battery-health-charging.extensionUuid
         ];
+      };
+
+      "org/gnome/shell/extensions/apps-menu" = {
+        "show-apps-icon" = true; # Contoh pengaturan.
       };
 
       # GNOME Desktop Interface settings
