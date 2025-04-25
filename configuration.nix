@@ -13,6 +13,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "nix0s"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -32,7 +33,6 @@
     extraPackages = with pkgs; [ amdvlk ];
     extraPackages32 = with pkgs; [ driversi686Linux.amdvlk];
   };
-
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";

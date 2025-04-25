@@ -3,7 +3,7 @@
 {
   # import file
   imports = [
-    ./apps/zsh.nix
+    ./zsh.nix
   ];
   
   ## Home-manager
@@ -35,6 +35,13 @@
     settings = {
       # Uncomment and set this if you want to enable the dark theme
       # "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+
+      # Backgorund
+      "org/gnome/desktop/background" = {
+        color-shading-type = "solid";
+        picture-uri = "file:///home/tabun/Pictures/minimal.jpg";
+      };
+
       # GNOME Mutter settings
       "org/gnome/mutter" = {
         experimental-features = [
