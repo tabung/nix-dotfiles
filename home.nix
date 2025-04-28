@@ -2,9 +2,9 @@
 
 {
   # import file
-  imports = [
-    ./zsh.nix
-  ];
+  # imports = [
+  #   ./zsh.nix
+  # ];
   
   ## Home-manager
   home.stateVersion = "22.11";
