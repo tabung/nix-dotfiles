@@ -21,7 +21,7 @@
   in
   {
     nixosConfigurations = {
-      nix0s = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts ];
         specialArgs = {

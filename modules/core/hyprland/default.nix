@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./hardware.nix
     ./network.nix
     ./pipewire.nix
     ./program.nix

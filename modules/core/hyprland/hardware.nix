@@ -1,8 +1,6 @@
   
 { pkgs, ... }:
 {
-  hardware.bluetooth {
-    enable = true;
-    powerOnBoot = true;
-  };
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true;
 }
