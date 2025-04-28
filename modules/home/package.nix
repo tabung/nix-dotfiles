@@ -1,10 +1,11 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    remmina
+    gpu-screen-recorder-gtk
     heroic
-    vscode
     libreoffice-fresh
+    remmina
+    vscode
     zotero
 
     # IDE
@@ -16,6 +17,5 @@
     gnome-tweaks
     gnomeExtensions.caffeine
     gnomeExtensions.battery-health-charging
-    gnomeExtensions.easyScreenCast
   ];
 }
