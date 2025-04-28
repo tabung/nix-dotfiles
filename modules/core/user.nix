@@ -26,7 +26,7 @@
     users.tabun = {
       imports = 
         if (de == "gnome") then
-          [ ./../home ]
+          [ ./../home/gnome ]
         else
           [ ./../home ];
       home.username = "tabun";
