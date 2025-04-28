@@ -8,21 +8,14 @@
 }:
 {
   imports = [
-    ./configuration.nix
-    # ./bootloader.nix
-    # ./hardware.nix
-    # ./xserver.nix
-    # ./network.nix
-    # ./nh.nix
-    # ./pipewire.nix
-    # ./program.nix
-    # ./security.nix
-    # ./services.nix
-    # ./steam.nix
-    # ./system.nix
-    # ./flatpak.nix
-    # ./user.nix
-    # ./wayland.nix
-    # ./virtualization.nix
+    ./bootloader.nix
+    ./fonts.nix
+    ./hardware.nix
+    ./network.nix
+    ./program.nix
+    ./security.nix
+    ./services.nix
+    ./system.nix
+    ./user.nix
   ];
 }
