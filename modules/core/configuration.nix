@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      # ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -94,7 +94,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs username host; };
+    # extraSpecialArgs = { inherit inputs; };
     users.tabun = {
       imports = [ ./../home ];
       home.username = "tabun";

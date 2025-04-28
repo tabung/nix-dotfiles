@@ -1,5 +1,5 @@
 {inputs, host, ...}: {
   imports = [
-    ./zsh
+    ./home.nix
   ];
 }
