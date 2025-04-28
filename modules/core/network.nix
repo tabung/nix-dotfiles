@@ -1,4 +1,5 @@
 { pkgs, host, ... }:
 {
-  networking.networkmanager.enable = true;
+  networking.hostName = "nix0s"; 
+  networking.wireguard.enable = true;
 }

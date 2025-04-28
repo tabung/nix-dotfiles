@@ -26,6 +26,7 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           caffeine.extensionUuid
           battery-health-charging.extensionUuid
+          easyScreenCast.extensionUuid
         ];
       };
 

@@ -26,7 +26,7 @@
         modules = [ ./hosts ];
         specialArgs = {
           inherit self inputs;
-          de = "hyprland";
+          de = "gnome";
         };
       };
     };

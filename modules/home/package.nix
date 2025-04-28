@@ -16,5 +16,6 @@
     gnome-tweaks
     gnomeExtensions.caffeine
     gnomeExtensions.battery-health-charging
+    gnomeExtensions.easyScreenCast
   ];
 }
