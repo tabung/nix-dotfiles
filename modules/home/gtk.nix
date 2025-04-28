@@ -1,41 +1,5 @@
-{ config, pkgs, ... }:
-
+{ pkgs, inputs, ... }:
 {
-  # import file
-  # imports = [
-  #   ./zsh.nix
-  # ];
-  
-  ## Home-manager
-  # home.stateVersion = "22.11";
-
-  # Home packages
-  home.packages = with pkgs; [
-    remmina
-    heroic
-    vscode
-    libreoffice-fresh
-    zotero
-
-    # IDE
-    android-studio
-    jetbrains.datagrip
-
-    # Theme app
-    tela-icon-theme
-    gnome-tweaks
-    gnomeExtensions.caffeine
-    gnomeExtensions.battery-health-charging
-  ];
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    userEmail = "yurandarezky@atmaluhur.ac.id";
-    userName = "Rezky Yuranda";
-  };
-
-  # Dconf settings
   dconf = {
     enable = true;
     settings = {
