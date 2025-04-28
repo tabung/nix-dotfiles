@@ -101,10 +101,12 @@
     jdk
     go
     nodejs
+    wireguard-tools
   ];
 
   fonts.packages = with pkgs; [
     noto-fonts
+    league-gothic
     adwaita-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
