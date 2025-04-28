@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, de, ... }:
 
 {
   imports =
@@ -24,7 +24,11 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     users.tabun = {
-      imports = [ ./../home ];
+      imports = 
+        if (de == "gnome") then
+          [ ./../home ]
+        else
+          [ ./../home ];
       home.username = "tabun";
       home.homeDirectory = "/home/tabun";
       home.stateVersion = "24.05";

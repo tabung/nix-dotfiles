@@ -1,8 +1,8 @@
 {inputs, host, ...}: {
   imports = [
-    ./git.nix
+    ../git.nix
     ./gtk.nix
-    ./package.nix
-    ./zsh
+    ../package.nix
+    ../zsh
   ];
 }

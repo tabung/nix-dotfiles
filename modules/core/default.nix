@@ -14,8 +14,8 @@
     ./network.nix
     ./program.nix
     ./security.nix
-    ./services.nix
-    # ./system.nix
+    # ./services.nix
+    ./system.nix
     ./user.nix
   ];
 }
