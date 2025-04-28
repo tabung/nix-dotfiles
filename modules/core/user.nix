@@ -28,7 +28,7 @@
         if (de == "gnome") then
           [ ./../home/gnome ]
         else
-          [ ./../home ];
+          [ ./../home/hyprland ];
       home.username = "tabun";
       home.homeDirectory = "/home/tabun";
       home.stateVersion = "24.05";
