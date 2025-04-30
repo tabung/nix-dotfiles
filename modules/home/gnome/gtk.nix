@@ -1,5 +1,13 @@
 { pkgs, inputs, ... }:
 {
+  home.packages = with pkgs; [
+    tela-icon-theme
+    gnome-tweaks
+    gnomeExtensions.caffeine
+    gnomeExtensions.battery-health-charging
+    gnomeExtensions.blur-my-shell
+  ];
+
   dconf = {
     enable = true;
     settings = {
@@ -26,6 +34,7 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           caffeine.extensionUuid
           battery-health-charging.extensionUuid
+          blur-my-shell.extensionUuid
         ];
       };
 
