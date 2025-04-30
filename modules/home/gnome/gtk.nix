@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     tela-icon-theme
-    gnome-tweaks
     gnomeExtensions.caffeine
     gnomeExtensions.battery-health-charging
     gnomeExtensions.blur-my-shell
