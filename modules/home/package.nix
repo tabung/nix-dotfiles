@@ -4,6 +4,7 @@
     gpu-screen-recorder-gtk
     heroic
     libreoffice-fresh
+    obsidian
     remmina
     vscode
     zotero
